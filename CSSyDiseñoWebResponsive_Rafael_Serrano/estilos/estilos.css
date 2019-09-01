@@ -1,0 +1,238 @@
+body {
+    font-family: "Dancing Script";
+    background: #02010a;
+}
+
+/*CSS GLOBAL*/
+#contenido {
+    width: 900px;
+    margin: auto;
+}
+
+img {
+    -webkit-box-shadow: 2px 2px #02010a;
+    box-shadow: 2px 2px #02010a;
+    display: block;
+}
+
+.noSubrayado {
+    text-decoration: none;
+}
+
+
+/*CSS DEL ENCABEZADO*/
+header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1%;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-name: slidein;
+    animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+    0% {
+        margin-top: 150%;
+    }
+
+    60% {
+        margin-top: -5%;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+
+}
+
+@keyframes slidein {
+    0% {
+        margin-top: 150%;
+    }
+
+    60% {
+        margin-top: -5%;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+
+}
+
+header > h1 {
+    width: 50%;
+    text-shadow: 2px 2px #02010a;
+    text-align: left;
+}
+
+header > nav {
+    width: 50%;
+    text-align: right;
+}
+
+a {
+    color: inherit;
+}
+
+/*CSS DEL CUERPO*/
+#central {
+    background: #82c3a6;
+    padding: 5%;
+}
+
+#contenedorsecundario {
+    background: #d5c75f;
+    border: 1px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+#contenedorsecundario > div {
+    width: 40%;
+    padding: 5%;
+}
+
+#contenedorgaleria {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #d5c75f;
+    border: 1px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+#contenedorgaleria > div {
+    width: 27%;
+    margin: 3%;
+}
+
+#imagen2 {
+    -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+    transition-property: -webkit-transform, -webkit-box-shadow;
+    transition-property: transform, box-shadow;
+    transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow;
+    -webkit-transition: 1s, 1s;
+    transition: 1s, 1s;
+}
+
+#imagen2:hover {
+    -webkit-box-shadow: 2px 2px #82c3a6;
+    box-shadow: 2px 2px #82c3a6;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+#imagen3 {
+    -webkit-transition-property: border, -webkit-transform;
+    transition-property: border, -webkit-transform;
+    transition-property: transform, border;
+    transition-property: transform, border, -webkit-transform;
+    -webkit-transition: 1s, 1s;
+    transition: 1s, 1s;
+}
+
+#imagen3:hover {
+    -webkit-box-shadow: 2px 2px #82c3a6;
+    box-shadow: 2px 2px #82c3a6;
+    -webkit-transform: translate(20px, -5px);
+    transform: translate(20px, -5px);
+}
+
+#contenedorgaleria > div:nth-child(1) {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+#contenedorgaleria > div:nth-child(3) {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+#contenedorgaleria > div:nth-child(even) {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/*CSS DEL PIE*/
+footer {
+    background: #c6d5c5;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+#contenedorpie {
+    background: #c6d5c5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+#contenedorpie > div {
+    text-align: center;
+    width: 25%;
+
+}
+
+.icono {
+    display: inline;
+    width: 10%;
+    vertical-align: middle;
+}
+
+
+@media (max-width:900px) {
+    #contenido {
+        width: 100%;
+    }
+
+    header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #contenedorsecundario div {
+        width: 100%;
+    }
+
+    #contenedorgaleria > div {
+        width: 90%;
+        margin: 5%;
+    }
+
+    #contenedorpie > div {
+        width: 100%;
+        text-align: left;
+    }
+}

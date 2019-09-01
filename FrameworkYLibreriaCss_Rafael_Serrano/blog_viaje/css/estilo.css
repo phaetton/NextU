@@ -1,0 +1,59 @@
+/*Configuración del cuerpo*/
+body {
+    background-image: url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+/*espacios de todos los div*/
+div {
+    padding: 5px;
+}
+
+/*borde redondo de los iconos de redes sociales*/
+img {
+    border-radius: 10px;
+}
+
+/*ocultar texto*/
+.ocultatexto {
+    margin: auto;
+}
+
+/*imagen de entrada*/
+.imagenentrada {
+    float: left;
+    margin: 0px 50px 20px 0px;
+    width: 40%;
+}
+
+/*cuando es celular*/
+@media (max-width: 768px) {
+    div {
+        padding: 0px;
+    }
+
+    body {
+        background-image: url(../img/fondo2.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+
+    img {
+        margin-top: 10px;
+    }
+
+    .ocultatexto {
+        width: 50px;
+        margin: 10px;
+    }
+
+    .imagenentrada {
+        width: 100%;
+        float: center;
+        margin: auto;
+    }
+
+}

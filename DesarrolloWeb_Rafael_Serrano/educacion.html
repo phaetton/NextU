@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="author" content=“Rafael Serrano”>
+    <meta name="description" content=“Hoja de Educación“>
+    <title>Hoja de Vida</title>
+</head>
+
+<body>
+    <header>
+        <p>
+            <svg>
+                <image xlink:href="imagenes/logotipo.svg" alt="logotipo" Title="logotipo" width="200"></image>
+            </svg>
+        </p>
+        <h1>Hoja de Vida</h1>
+        <h2>Datos personales</h2>
+        <h3>
+            <strong>Nombres</strong>
+        </h3>
+        <p>
+            <em>Rafael Francisco</em>
+        </p>
+        <h3>
+            <strong>Apellidos</strong>
+        </h3>
+        <p>
+            <em>Serrano Urtecho</em>
+        </p>
+        <h3>
+            <strong>Fecha de Nacimiento</strong>
+        </h3>
+        <p>
+            <em>02 de Abril de 1986</em>
+        </p>
+        <h3>
+            <strong>Lugar de Nacimiento</strong>
+        </h3>
+        <p>
+            <em>Diriamba - Nicaragua</em>
+        </p>
+
+        <nav>
+            <a href="index.html">Inicio</a>|
+            <a href="educacion.html">Educación</a>|
+            <a href="experiencia.html">Experiencia</a>
+        </nav>
+        <h2>Educación</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Año</th>
+                    <th>Institución</th>
+                    <th>Lugar</th>
+                    <th>¿Culmino?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2019</td>
+                    <td>Next U</td>
+                    <td>Internet</td>
+                    <td>En proceso</td>
+                </tr>
+                <tr>
+                    <td>2018</td>
+                    <td>TestOut</td>
+                    <td>Internet</td>
+                    <td>Si</td>
+                </tr>
+            </tbody>
+        </table>
+        <form autocomplete="on" name="agregarestudios">
+            <legend>
+                <h3>Agregar Estudios</h3>
+            </legend>
+            <p>
+                <label for="anio">Año</label>
+                <br>
+                <select name="anio" id="anio">
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                </select>
+            </p>
+            <p>
+                <label for="institucion" required>Institución</label>
+                <br>
+                <input type="text" name="institucion" id="institucion" placeholder="Ej: institución" required>
+            </p>
+            <p>
+                <label for="lugar">Lugar</label>
+                <br>
+                <textarea name="lugar" id="lugar" cols="30" rows="10" placeholder="Ej: Lugar de estudio"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Enviar">
+            </p>
+        </form>
+
+    </header>
+
+    <footer>
+        <h3>Correo eléctrónico</h3>
+        <em>rafael@liftinggenerations.org</em> | <em>rafa.tesla@gmail.com</em>
+        <h3>Teléfono</h3>
+        <em>(505)8240-6702</em>
+        <h3>Facebook:</h3>
+        <em>https://www.facebook.com/phaetton</em>
+    </footer>
+</body>
+
+</html>

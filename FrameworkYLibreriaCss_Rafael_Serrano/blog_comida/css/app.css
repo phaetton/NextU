@@ -1,0 +1,68 @@
+/*fondo del cuerpo*/
+body {
+    background-image: url(../img/fondocuerpo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*color transparente*/
+.contenedorpadre {
+    background: rgba(255, 255, 0, 0.6);
+}
+
+/*configuracion de todos los div*/
+div {
+    padding: 5px 5px;
+}
+
+/*borde a la derecha del titulo*/
+.bordederecho {
+    border-right: 1px black solid;
+}
+
+/*color de los botones*/
+.button {
+    background: #ff7600;
+}
+
+/*color de comentarios*/
+.comentario {
+    background: #ff9a44;
+    color: #040526;
+}
+
+/*color de texto de los vinculos*/
+a {
+    color: brown;
+}
+
+/*linea que esta abajo de historia*/
+hr {
+    border-bottom: 1px brown solid;
+}
+
+/*a cuando paso sobre*/
+a:hover {
+    height: 40px;
+    background: #ff7600;
+    color: white;
+
+}
+
+/*a activo*/
+.activo {
+    height: 40px;
+    background: #cb00ff;
+    color: black;
+}
+
+/*configuración para telefono*/
+@media (max-width: 768px) {
+    body {
+        background-image: url(../img/fondocuerpovertical.jpg);
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+}

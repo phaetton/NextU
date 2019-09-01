@@ -1,0 +1,112 @@
+/*cuerpo*/
+body {
+    background: rgb(255, 196, 0);
+    font-family: "Gill Sans", "Helvetica Neue", Helvetica, "Myriad Pro", Arial, sans-serif;
+}
+
+/*separación a la segunda parte*/
+.segundaparte {
+    margin-top: 30px;
+}
+
+/*ubicacion del logotipo*/
+.logotipo {
+    float: left;
+    width: 200px;
+}
+
+/*redes sociales abajo*/
+.redes-sociales {
+    margin-top: 110px;
+}
+
+/*imagenes de las redes sociales*/
+.img-social {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 4px;
+}
+
+/*separacion entre elementos de comentario e imagen*/
+.usuario {
+    padding: 20px;
+}
+
+/*configuracion primer columna*/
+.filaancha {
+    padding: 10px;
+    background: #089663;
+    color: white;
+}
+
+/*solo se configura el fondo porque la altura se configura con a*/
+.navbar-normal {
+    background: #3b004a;
+}
+
+/*para que el nav sea ancho*/
+a > div {
+    padding: 10px 10px;
+}
+
+/*a cuando paso sobre*/
+a > div:hover {
+    height: 40px;
+    background: #cb00ff;
+    color: black;
+
+}
+
+/*a activo*/
+.activo {
+    height: 40px;
+    background: #cb00ff;
+    color: black;
+}
+
+/*fondo del encabezado*/
+.cabecera {
+    background-image: url(../img/fondosuperior.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*ubica fila de navegacion a la izquierda*/
+.filaizquierda {
+    float: right;
+}
+
+/*telefonos*/
+@media (max-width: 768px) {
+
+    /*cambio de posicion del logotipo*/
+    .logotipo {
+        margin: 0 auto;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+
+    /*ubica los iconos al centro cuando es celular*/
+    .img-social {
+        width: 18%;
+        height: 18%;
+        margin: auto 2px;
+    }
+
+    /*botoneria de las redes sociales*/
+    .redes-sociales {
+        float: center;
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+
+    /*oculta la fila derecha*/
+    .filaizquierda {
+        display: none;
+    }
+
+
+}
