@@ -1,1 +1,1 @@
-https://github.com/phaetton/NextU.git
+https://github.com/phaetton/NextU/tree/master/FrameworksyLibrer%C3%ADasJavaScript_Rafael_Serrano
