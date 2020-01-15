@@ -1,0 +1,4 @@
+{"_id":"Entrega de tarea 01","title":"Entrega de tarea","start":"2020-01-01","end":"Invalid da","start_hour":"2020-01-01","end_hour":"e","fk_usuario":"walberto@gmail.com"}
+{"_id":"Entrega de tarea 02","start":"2020-01-02","end":"2020-01-02","end_hour":"10:00:00","start_hour":"11:00:00","allDay":1.0,"title":"EntrefaDeTrarea"}
+{"_id":"Entrega de tarea 03","title":"Mejorar Tarea","start":"2020-01-05","end":"2020-01-06","start_hour":"2020-01-05","end_hour":"07:30:00","fk_usuario":"walberto@gmail.com"}
+{"_id":"Entrega de tarea 04","title":"Ultima Propuesta","start":"2020-01-24","end":"","start_hour":null,"end_hour":null,"fk_usuario":"walberto@gmail.com"}

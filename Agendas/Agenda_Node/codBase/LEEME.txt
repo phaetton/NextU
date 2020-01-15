@@ -1,0 +1,16 @@
+Nombre Base de datos: agendaGP 
+La coleccion se encuentra en formato .json 
+Datos de Acceso usuario:walberto@gmail.com   password: 12345
+
+
+Cualquier instalación de MongoDB, independiente del sistema operativo, necesita crear una carpeta en la raíz
+ del sistema llamada /data/db. Este directorio es donde se almacena toda la información de la base de datos.
+
+Servicios (Mongod, Mongo, MongoExport, MongoImport)
+ubicacion: C:\Program Files\MongoDB\Server\4.2\bin
+primero ejecutar mongod.exe (siempre abierto)
+ejecutar mongo.exe
+
+show dbs; //mostrar las base de datos existentes
+use agenda;//usar o crear la base de datos
+show collections; // colecciones dentro de la base de datos seleccionada
