@@ -1,0 +1,15 @@
+<div class="barra-superior animated fadeInDown fast"> 
+  <nav class="navbar">
+ <div class="container-fluid">
+   <div class="navbar-header">
+     <a [routerLink]="['/tienda']" class="navbar-brand text-shadow"><i class="material-icons">shopping_cart</i><p> VirtualStore</p></a>
+   </div>
+   <ul class="nav navbar-nav pull-right">
+     <li><a [routerLink]="['/tienda']" class="text-shadow active" [ngClass]="{active : (this.url == 'tienda') }"> <i class="material-icons">apps</i></a></li>
+     <li><a [routerLink]="['/carrito']" class="text-shadow active" [ngClass]="{active : (this.url == 'carrito') }"><i class="material-icons">shopping_cart</i><span *ngIf="this.carritoService.contadorCarrito() > 0" class="item-counter">{{this.carritoService.contadorCarrito()}}</span></a></li>
+     <li class="cursor "><a (click)="cerrarSesion()" class="text-shadow"><i class="material-icons">assignment_return</i></a></li>
+   </ul>
+ </div>
+</nav>
+
+</div>

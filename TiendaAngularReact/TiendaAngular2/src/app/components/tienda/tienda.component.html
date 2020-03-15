@@ -1,0 +1,45 @@
+<div class="tienda">
+  <div class="container">
+    <barra-superior></barra-superior>
+    <!--lista-productos></lista-productos-->
+    <div class="lista-productos col-xs-12 animated fadeInDownBig fast">
+      <form [formGroup]="formulario" (onSubmit)="preventDefault(e)">
+        <div class="col-sm-12">
+          <h2 class="pull-left white-text">{{titulo}}</h2> 
+          <span class="pull-right">
+            <div class="form-group ">
+              <label for="descripcion" class="white-text">¿Qué estas buscando?</label>
+              <!-- Se utiiliza la etiqueta #filtro para identificar el input, se utliza el EventBiding onChange para pasar el valor del campo input a la funcion filtrarCatalogo-->
+              <input formControlName="descripcion" type="text" id="descripcion" placeholder="aguacate" class="form-control input-filtro" (input)="filtrarCatalogo(filtro.value)" #filtro>
+              <span class="error">Introduzca la información a buscar</span><!-- Mensaje de campo inválido-->
+            </div>
+          </span>
+        </div>
+      </form>
+      <ul class="producto nav animated fadeInUpBig slow pull-left col-xs-12">
+        <li class="col-md-3 col-sm-4 col-xs-12" *ngFor="let item of listaProductos" >
+          <div class="box">
+            <div class="img grayscale" [ngClass]="{grayscale:(item.disponible <= 0)}">
+              <img src="{{item.imagen}}" alt="{{item.descripcion}}" class="img-responsive">
+              <h4 class="text-center text-shadow">{{item.descripcion}}</h4>
+            </div>
+            <div class="informacion">
+              <span class="badge carrito" *ngIf="this.obtenerCantidad(item.id)"><small class="white-text text-shadow"><i class="material-icons">shopping_cart</i> <p>{{this.obtenerCantidad(item.id)}}</p></small></span>
+              <p><small><b>Precio: </b>{{item.precio | currency : 'USD' : 1-0-2 }}</small></p>
+              <p><small><b>Disponibles: </b>{{item.disponible ? item.disponible : 'Agotado'}}</small></p>
+              <div class="input-group" >
+                <span class="input-group-btn">
+                  <button class="btn btn-warning" type="button" [disabled]="(item.disponible <= 0)" (click)="agregarProducto(item.id, agregar.value)">Añadir</button>
+                </span>
+                <input type="number" [value]="1" [disabled]="(item.disponible <= 0)" min="0" max={{item.disponible}} class="form-control text-right" id="disponible"  #agregar>
+              </div>
+            </div>
+            <div class="box footer">
+              <a [routerLink]="['/tienda/detalle-producto/', item.id]" class="btn btn-secundary">Ver Detalle</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

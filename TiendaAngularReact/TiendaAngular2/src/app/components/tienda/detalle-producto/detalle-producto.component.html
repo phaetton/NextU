@@ -1,0 +1,38 @@
+<div class="tienda"> 
+  <div class="container">
+    <barra-superior></barra-superior>
+    <div class="box carrito" *ngIf="informacionProducto">
+      <div class="form-group">
+        <a [routerLink]="[tienda]">Tienda</a><span> > {{informacionProducto.descripcion}}</span>
+      </div>
+      <h2 class="titulo animated fadeIn slow">
+        {{informacionProducto.descripcion}}
+        <span class="form-group pull-right">
+          <a [routerLink]="['/tienda/detalle-producto/', this.navegacionAtras(informacionProducto.id)]"  [ngClass]="{btn: true, btnSecundary:true, disabled: (this.navegacionSiguiente(informacionProducto.id) === 1)}" class="btn btn-secondary pull-left">  <i class="material-icons">keyboard_arrow_left</i> </a>
+          <a [routerLink]="['/tienda/detalle-producto/', this.navegacionSiguiente(informacionProducto.id)]" [ngClass]="{btn:true, btnSecundary:true, disabled: (this.navegacionSiguiente(informacionProducto.id) >= this.tiendaService.cargarCatalogo().length)}" class="btn btn-secondary pull-left"> <i class="material-icons">keyboard_arrow_right</i> </a>
+        </span>
+      </h2>
+      <ul class="producto list-group col-sm-6 col-xs-12 animated fadeIn slow pull-right" >
+        <li class="list-group-item col-xs-12 no-padding" [ngStyle]="{background:'#ededed'}">
+          <div class="col-xs-12 no-padding">
+            <div class="img no-padding pull-left">
+              <img src="{{informacionProducto.imagen}}" alt="{{informacionProducto.descripcion}}" class="img-responsive no-padding">
+              <h4 class="text-center text-shadow badge" *ngIf="this.obtenerCantidad(informacionProducto.id)"><small class="white-text"><i class="material-icons">shopping_cart</i> <b>{{this.obtenerCantidad(informacionProducto.id)}}</b></small></h4>
+            </div>
+            <div class="informacion">
+              <p><small><b>Precio: </b>{{informacionProducto.precio | currency : 'USD' : 1-0-2 }}</small></p>
+              <p><small><b>Disponible: </b>{{informacionProducto.disponible ? informacionProducto.disponible : 'Agotado'}}</small></p>
+              <div class="input-group" ><!--Deshabilitar el boton de agregar si el producto no esta disponible-->
+                <span class="input-group-btn">
+                  <button class="btn btn-warning" type="button" [disabled]="(informacionProducto.disponible <= 0)" (click)="this.agregarProducto(informacionProducto.id, agregar.value)">Añadir</button>
+                </span>
+                <input type="number" [value]="1" min="0" max={{informacionProducto.disponible}} [disabled]="(informacionProducto.disponible <= 0)" class="form-control text-right" id="disponible"  #agregar>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <p class="col-sm-6 col-xs-12 pull-right">{{informacionProducto.informacion}}</p>
+    </div>
+  </div>
+</div>

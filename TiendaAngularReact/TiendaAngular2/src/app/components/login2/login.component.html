@@ -1,0 +1,32 @@
+<div class="login"> 
+  <div class="overlay">
+  </div>
+      <div class="col-md-6 col-sm-s12 form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="checkLogin()">
+          <h4 class="text-center white-text">Inicia Sesión</h4>
+          <div class="form-group ">
+            <label for="email" class="white-text">Correo Electrónico</label>
+            <input formControlName="email" type="email" id="email" placeholder="luis@email.com" class="form-control input-email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+            <span class="error">Formato de email inválido</span><!-- Mensaje de campo inválido-->
+          </div>
+          <div class="form-group">
+            <label for="password" class="white-text">Contraseña</label>
+            <input formControlName="password" type="password" id="password" placeholder="12345" class="form-control input-email" >
+            <span class="error">Contraseña no puede ser vacía</span><!-- Mensaje de campo inválido-->
+          </div>
+          <div class="row text-center">
+            <div class="mensaje"> <!--Mostrar el mensaje de error de inicio de sesión-->
+              {{mensaje}}
+            </div>
+            <!--Deshabilitar el botón de enviar si los datos ingresados en el formulario son invá<lidos></lidos>-->
+            <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid" >Ingresar</button>
+          </div>
+        </form>
+
+        <ul>
+          <li class="text" *ngFor="let item of items | async">
+            {{item.$value}}
+          </li>
+        </ul>
+
+</div>

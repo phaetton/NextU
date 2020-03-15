@@ -1,0 +1,16 @@
+<div class="barra-superior">
+  <nav class="navbar">
+ <div class="container-fluid">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="#">La bodega</a>
+   </div>
+   <ul class="nav navbar-nav pull-right">
+     <li class="active" (click)="contadorCarrito()"><a [routerLink]="['/tienda']"><i class="material-icons">apps</i></a></li>
+     <li><a [routerLink]="['/cart']"><i class="material-icons">shopping_cart</i><span *ngIf="contadorCarrito()" class="item-counter">10</span></a></li>
+     <!--li class="active"><a [routerLink]="['/logout']"><i class="material-icons">inbox</i></a></li-->
+     <li><a class="cursor"(click)="cerrarSesion()"><i class="material-icons">assignment_return</i></a></li>
+   </ul>
+ </div>
+</nav>
+
+</div> 

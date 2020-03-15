@@ -1,0 +1,43 @@
+<div class="lista-productos col-xs-12"> 
+  <form [formGroup]="formulario" (onSubmit)="preventDefault(e)">
+    <div class="col-sm-12">
+      <h2 class="pull-left">Catálogo de Productos</h2>
+      <span class="pull-right">
+        <div class="form-group ">
+          <label for="descripcion" class="white-text">¿Qué estas buscando?</label>
+          <!-- Se utiiliza la etiqueta #filtro para identificar el input, se utliza el EventBiding onChange para pasar el valor del campo input a la funcion filtrarCatalogo-->
+          <input formControlName="descripcion" type="text" id="descripcion" placeholder="aguacate" class="form-control input-filtro" (input)="filtrarCatalogo(filtro.value)" #filtro>
+          <span class="error">Introduzca la información a buscar</span><!-- Mensaje de campo inválido-->
+        </div>
+      </span>
+    </div>
+  </form>
+
+
+  <ul class="producto nav">
+    <li class="col-md-3 col-sm-4 col-xs-12" *ngFor="let item of listaProductos">
+      <div class="img">
+        <img src="{{item.imagen}}" alt="{{item.descripcion}}" class="img-responsive">
+      </div>
+      <div class="informacion">
+        <h4>{{item.descripcion}}</h4>
+        <p><b>Precio:</b>{{item.precio}}</p>
+        <p><b>Unidades Disponibles:</b>{{item.disponible}}</p>
+        <a [routerLink]="['/detalle-producto', item.descripcion]" class="pull-left btn btn-primary">Ver Mas</a>
+        <span class="pull-rigth">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-warning" type="button">Añadir</button>
+            </span>
+            <input type="number" class="form-control text-left" id="disponible" placeholder="0">
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<p>
+  lista-productos works!
+</p>
