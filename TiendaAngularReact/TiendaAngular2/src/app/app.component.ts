@@ -14,4 +14,14 @@ import { NavbarComponent } from "./navbar/navbar.component";
 })
 export class AppComponent {
   title = 'TiendaAngular2';
+  public comprador;
+  
+  constructor() { 
+      //objeto
+this.comprador = {
+  id:'1';
+  nombre:'Francisco',
+  pass:'12345'
+  }
+}
 }
