@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <!-- titulo de página -->
+  <span>Tienda</span>
+  <span class="example-spacer"></span>
+  
+  <button mat-icon-button class="example-icon">
+    <mat-icon routerLink = '/menu'>blur_on</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon">
+    <mat-icon  matBadge="{{cantidadCarrito}}" matBadgeColor="warn" routerLink='/carrito'>shopping_cart</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
