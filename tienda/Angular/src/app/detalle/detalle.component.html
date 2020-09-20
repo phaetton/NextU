@@ -1,0 +1,30 @@
+<div *ngIf="show" class="card white">
+  <div class="card-content">
+    <hr>
+    <div class="row main">
+      <div class="col s12 m12">
+        <h2 class="header">{{nombre}}</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="/assets/{{imagen}}">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <div class="card-panel blue-grey darken-1 white-text">{{descripcion}}</div>
+              <dl>
+                <dt>Precio:</dt>
+                <dd>{{precio | currency}}</dd>
+                <dt>Unidades Disponibles:</dt>
+                <dd>{{stock}}</dd>
+            </dl>
+            </div>
+            <div class="card-action">
+              <button (click)="showCatalog()" class="btn grey lighten-5 black-text text-darken-2" type="button">Atrás</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  </div>
+</div>

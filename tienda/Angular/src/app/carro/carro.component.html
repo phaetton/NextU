@@ -1,0 +1,23 @@
+<div *ngIf="show" class="card white">
+  <div class="card-content">
+    <div class="row main">
+      <div class="col m5">
+        <ul class="collection">
+          <li class="collection-item avatar" *ngFor="let item of items">
+            <img src="/assets/{{item.imagen}}" alt="" class="circle">
+            <span class="title">{{item.nombre}}</span>
+            <p><strong>Unidades:</strong> {{item.unidades}}<br>
+              <p><strong>Precio:</strong> {{item.precio | currency}}<br>
+               <strong>Subtotal:</strong> {{item.subtotal | currency}}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col m7">
+        <div class="total">Total: {{total|currency}}</div>
+        <button (click)="showCatalog()" class="btn white cart-button" type="button" name="mas">Cancelar</button>
+        <button (click)="pay()" class="btn white cart-button" type="button" name="mas">Pagar</button>
+      </div>
+    </div>
+  </div>
+</div>

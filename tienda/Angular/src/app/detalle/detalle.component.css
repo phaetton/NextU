@@ -1,0 +1,14 @@
+hr{
+  margin-top: 20px;
+  color: #e0e0e0;
+  background-color: #e0e0e0;
+  height: 1px;
+  border: none;
+}
+
+.img-detalle{
+  height: 300px;
+  border-radius: 5px;
+  border: 1px solid #2298b6;
+  padding: 10px;
+}

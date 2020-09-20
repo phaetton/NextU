@@ -1,0 +1,29 @@
+<div *ngIf="show" class="card white">
+  <div class="card-content">
+    <span class="card-title gray-text text-lighten-2">Catálogo de productos</span>
+    <div class="buscar-box">
+      <label class="buscar-box-label" for="buscar">¿Qué estás buscando?</label>
+      <input id=buscar type="text" name="buscar" placeholder="Buscar producto" (keyup)="onKey($event)">
+    </div>
+    <hr>
+    <ul class="catalogo">
+      <li class="item"  *ngFor="let item of items">
+        <img class="item-img" src="/assets/{{item.imagen}}" alt="">
+        <label class="item-title">{{item.nombre}}</label>
+        <dl>
+          <dt>Precio:</dt>
+          <dd>{{item.precio| currency}}</dd>
+        </dl>
+        <dl>
+          <dt>Unidades disponibles:</dt>
+          <dd>{{item.stock}}</dd>
+        </dl>
+        <div class="item-buttons">
+          <button (click)="showDetails(item.nombre, item.imagen, item.precio, item.stock,item.descripcion)" class="btn blue darken-2 no-padding" type="button" name="mas">Ver más</button>
+          <button class="btn yellow darken-2 no-padding" (click)="alCarrito(number.value,item.nombre)" type="button" name="agregar">Añadir</button>
+          <input class="item-buttons-number" type="number" name="numero" value="1" #number>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

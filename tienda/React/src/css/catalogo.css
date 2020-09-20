@@ -1,0 +1,56 @@
+.catalogo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.buscar-box{
+  display: inline-block;
+  float: right;
+}
+
+.buscar-box-label{
+  color: black;
+}
+
+.item-buttons-number{
+  width: 40px !important;
+  padding-left: 10px !important; 
+}
+
+.no-padding{
+    padding: 0 0.5rem !important;
+}
+
+.item{
+  display: grid;
+  border: 1px solid;
+  border-color: #e0e0e0;
+  width: auto;
+  padding: 20px;
+  margin: 5px;
+}
+
+.item-title{
+  font-size: 1.5rem;
+  color: black;
+}
+
+.item-img{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+hr{
+  margin-top: 50px;
+  color: #e0e0e0;
+  background-color: #e0e0e0;
+  height: 1px;
+  border: none;
+}
+
+dl{
+  display: flex;
+  margin: 5px 0;
+}

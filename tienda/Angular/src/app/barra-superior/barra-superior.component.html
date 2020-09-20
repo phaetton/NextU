@@ -1,0 +1,14 @@
+<nav class="white darken-1">
+  <div class="nav-wrapper">
+    <a [routerLink]="['']" class="brand-logo">La bodega</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a [routerLink]="['../store']"><i class="icon ion-md-apps"></i></a></li>
+      <li *ngIf="count==0"><a (click)="emptyCart()"><i class="icon ion-md-cart"></i></a></li>
+      <li *ngIf="count>0"><a (click)="showCart()"><i class="icon ion-md-cart left"></i>
+        <span class="new badge" data-badge-caption="">{{count}}</span>
+      </a></li>
+      <li><a [routerLink]="['']"><i class="icon ion-md-filing"></i></a></li>
+      <li><a [routerLink]="['/']"><i class="icon ion-md-exit"></i></a></li>
+    </ul>
+  </div>
+</nav>

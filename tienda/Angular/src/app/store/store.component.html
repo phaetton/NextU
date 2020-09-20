@@ -1,0 +1,10 @@
+<div class="row main">
+  <barra-superior [catalogo]="catalogo" #topBar></barra-superior>
+  <div class="row">
+      <div class="col m12">
+          <catalogo [topBar]="topBar" [detalle]="detalle" [carro]="carro" #catalogo></catalogo>
+          <detalle [catalogo]="catalogo" #detalle></detalle>
+          <carro [catalogo]="catalogo" #carro></carro>
+      </div>
+  </div>
+</div>
